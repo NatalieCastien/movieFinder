@@ -32,14 +32,12 @@ const applyFilter = (filter) =>{
         })
         fillMovies(latestMovieArray);
     } else {
-        let filteredMovies = [];
-        // const movieTitles = movieArray.map((movie) => (movie.Title).toLowerCase());
+        let filteredMovies = [];        
         movieArray.forEach((movie) => {
             const movieTitle = (movie.Title).toLowerCase();
             const included = movieTitle.includes(filter);
             if (included == true) {
                 filteredMovies.push(movie);                
-                // console.log(filteredMovies);
             }
         });
         fillMovies(filteredMovies);      
@@ -48,7 +46,6 @@ const applyFilter = (filter) =>{
 
 // EVENT listener for every filterbutton
 filterbuttons.forEach((button) => {
-    console.log(button.value);    
     const filtername = (button.value).toLowerCase();
     button.addEventListener('click', () => {
         applyFilter(filtername);
@@ -88,7 +85,6 @@ searchButton.addEventListener('click', () => {
 
 // If enter is pressed, simulate the click event
 searchInput.addEventListener('keyup', (event) => {
-    console.log(event);
     if (event.key == "Enter") {
         searchButton.click();
     }
