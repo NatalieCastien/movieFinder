@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="movies.js"></script>
+    <script defer src="index.js"></script>
+    <title>Movie+</title>
+</head>
+<body>
+    <div class="header">
+        <div class="title">
+            <h1><span><img class="logo" src="wink11.png"/></span>Winc+</h1>
+        </div>
+    </div>
+
+    <img id="search-icon" class="header-loop" src="search2.png" alt="search-button" />
+
+    <div id="filter-container">
+        <span class="filter-button"><input type="radio" name="filter" value="all" checked>All</span>
+        <span class="filter-button"><input type="radio" name="filter" value="latest">Latest</span>
+        <span class="filter-button"><input type="radio" name="filter" value="avengers">Avengers</span>
+        <span class="filter-button"><input type="radio" name="filter" value="x-men">X-men</span>
+        <span class="filter-button"><input type="radio" name="filter" value="princess">Princess</span>
+        <span class="filter-button"><input type="radio" name="filter" value="batman">Batman</span>
+    </div>
+
+    <div id="search-field" class="search-field-hidden">
+        <input id="search-input" type="text" value="">
+        <img id="search-button" class="loop" src="search2.png" alt="search-button" />
+    </div>
+
+    <div id="movie-container"></div>
+    <footer></footer>            
+</body>
+</html>
